@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import "./button.css";
+import "./base-button.css";
 
 export default {
   name: "base-button",
@@ -32,10 +32,10 @@ export default {
   computed: {
     classes() {
       return {
-        "storybook-button": true,
-        "storybook-button--primary": this.primary,
-        "storybook-button--secondary": !this.primary,
-        [`storybook-button--${this.size}`]: true
+        "storybook-base-button": true,
+        "storybook-base-button--primary": this.primary,
+        "storybook-base-button--secondary": !this.primary,
+        [`storybook-base-button--${this.size}`]: true
       };
     },
     style() {
@@ -47,7 +47,7 @@ export default {
 
   methods: {
     onClick(event) {
-      console.log(event)
+      console.log("hello")
       this.$emit("onClick", event);
     }
   }
