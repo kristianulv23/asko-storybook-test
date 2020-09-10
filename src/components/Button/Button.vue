@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <button type="button" :class="classes" @click="onClick($event)" :style="style">{{ label }}</button>
 </template>
 
 <script>
@@ -46,8 +46,9 @@ export default {
   },
 
   methods: {
-    onClick() {
-      this.$emit("onClick");
+    onClick(event) {
+      console.log(event)
+      this.$emit("onClick", event);
     }
   }
 };
