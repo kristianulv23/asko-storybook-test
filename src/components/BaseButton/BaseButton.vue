@@ -6,7 +6,7 @@
 import "./button.css";
 
 export default {
-  name: "my-button",
+  name: "base-button",
 
   props: {
     label: {

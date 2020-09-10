@@ -1,8 +1,8 @@
-import MyButton from "../components/Button/Button";
+import BaseButton from "../components/BaseButton/BaseButton";
 
 export default {
-  title: "Example/Button",
-  component: MyButton,
+  title: "Example/BaseButton",
+  component: BaseButton,
   argTypes: {
     backgroundColor: { control: "color" },
     size: {
@@ -13,29 +13,29 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { MyButton },
-  template: '<my-button @onClick="onClick" v-bind="$props" />',
+  components: { BaseButton },
+  template: '<base-button @onClick="onClick" v-bind="$props" />',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: "Button",
+  label: "BaseButton",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: "Button",
+  label: "BaseButton",
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: "large",
-  label: "Button",
+  label: "BaseButton",
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: "small",
-  label: "Button",
+  label: "BaseButton",
 };
