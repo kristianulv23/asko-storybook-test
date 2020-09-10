@@ -47,7 +47,7 @@ export default {
 
   methods: {
     onClick(event) {
-      console.log("hellos")
+      console.log("helloss")
       this.$emit("onClick", event);
     }
   }
