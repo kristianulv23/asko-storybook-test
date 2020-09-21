@@ -1,44 +1,23 @@
 export const color = {
   // Palette
-  primary: "#FF4785", // coral
-  secondary: "#1EA7FD", // ocean
-  tertiary: "#DDDDDD",
-
-  orange: "#FC521F",
-  gold: "#FFAE00",
-  green: "#66BF3C",
-  seafoam: "#37D5D3",
-  purple: "#6F2CAC",
-  ultraviolet: "#2A0481",
-
-  // Monochrome
-  lightest: "#FFFFFF",
-  lighter: "#F8F8F8",
-  light: "#F3F3F3",
-  mediumlight: "#EEEEEE",
-  medium: "#DDDDDD",
-  mediumdark: "#999999",
-  dark: "#666666",
-  darker: "#444444",
-  darkest: "#333333",
-
-  border: "rgba(0,0,0,.1)",
-
-  // Status
-  positive: "#66BF3C",
-  negative: "#FF4400",
-  warning: "#E69D00",
+  white: "#ffffff",
+  black: "#000000",
+  pale: "#fff4d6",
+  duck_egg_blue: "#cff1f2",
+  charcoal_grey: "#333f48",
+  light_grey_blue: "#adb1b5",
 };
 
 export const spacing = {
-  padding: {
-    small: 10,
-    medium: 20,
-    large: 30,
+  margin: {
+    xs: 4,
+    s: 8,
+    m: 32,
   },
-  borderRadius: {
-    small: 5,
-    default: 10,
+  padding: {
+    xs: 4,
+    s: 8,
+    m: 32,
   },
 };
 
@@ -67,3 +46,23 @@ export const typography = {
     code: "90",
   },
 };
+
+export const phone_upper_boundary = 600;
+export const tablet_portrait_upper_boundary = 900;
+export const tablet_landscape_upper_boundary = 1200;
+export const desktop_upper_boundary = 1600;
+
+
+export const breakpoints = (content) => {
+
+  let phone_only = `
+  @media (max-width: ${phone_upper_boundary - 1}px) {
+    ${content}
+  }
+  `
+
+  return {
+    phone_only
+  }
+}
+

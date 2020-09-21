@@ -1,8 +1,8 @@
-//src/index.js
+import * as styles from "./shared/styles";
+import * as icons from "./shared/icons";
 
-import * as styles from './shared/styles';
-import * as animation from './shared/animation';
+export { styles, icons };
 
-export { styles, animation };
-
-export * from './components/Button/Button';
+export * from "./components/AskoButton";
+export * from "./components/AskoIcon";
+export * from "./components/AskoMessage";
